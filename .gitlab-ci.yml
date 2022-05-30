@@ -8,6 +8,7 @@ build:
         - echo "Building"
         - mkdir build
         - touch build/info.txt
+        - cd build
         - echo "chasis" > info.txt
         - echo "Engine" >> info.txt
         - echo "infra"  >> info.txt
