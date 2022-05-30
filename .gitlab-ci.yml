@@ -1,7 +1,8 @@
 build:
  script: 
-     mkdir build1
-     touch build1/info.txt
+     rm -rf build
+     mkdir build
+     touch build/info.txt
      cd  build
      echo "chasis" > info.txt
-     echo "Engine" > info.txt
+     echo "Engine" >> info.txt
