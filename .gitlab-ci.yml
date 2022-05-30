@@ -20,5 +20,6 @@ test:
     script:
         - echo "Testing"
         - test -f "build/info.txt"
+        - cd build
         - grep "chasis" info.txt
         - grep "Engine" info.txt
