@@ -1,0 +1,7 @@
+build:
+ script: 
+     mkdir build
+     touch build/info.txt
+     cd  build
+     echo "chasis" > info.txt
+     echo "Engine" > info.txt
