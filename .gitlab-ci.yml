@@ -3,22 +3,25 @@ stages:
     - test
 
 build:
- script: 
-     rm -rf build
-     mkdir build
-     touch build/info.txt
-     cd  build
-     echo "chasis" >> info.txt
-     echo "Engine" >> info.txt
+    stage: build
+    script:
+        - echo "Building"
+        - mkdir build
+        - touch build/info.txt
+        - cd build
+        - echo "chasis" > info.txt
+        - echo "Engine" >> info.txt
+        - echo "infra"  >> info.txt
+    artifacts:
+        paths:
+            - build/
 
-test verfit1: 
-   script:
-       cd build
-       grep "chasis" info.txt
-       grep "Engine" info.txt 
+test:
+    stage: test
+    script:
+        - echo "Testing"
+        - test -f "build/info.txt"
+        - cd build
+        - grep "chasis" info.txt
+        - grep "Engine" info.txt
 
-test verify2:
-    script: 
-         cd build
-         grep "abc" build/info.txt
- 
