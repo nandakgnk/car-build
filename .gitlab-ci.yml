@@ -1,7 +1,7 @@
 build:
  script: 
-     mkdir build
-     touch build/info.txt
+     mkdir build1
+     touch build1/info.txt
      cd  build
      echo "chasis" > info.txt
      echo "Engine" > info.txt
