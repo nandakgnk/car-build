@@ -1,3 +1,7 @@
+stages:
+    - build
+    - test
+
 build:
  script: 
      rm -rf build
@@ -6,3 +10,15 @@ build:
      cd  build
      echo "chasis" > info.txt
      echo "Engine" >> info.txt
+
+test verfit1: 
+   script:
+       cd build
+       grep chasis info.txt
+       grep Engine info.txt 
+
+test verify2:
+    script: 
+         cd build
+         grep "abc" build/info.txt
+ 
